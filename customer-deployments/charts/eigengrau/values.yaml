@@ -4,7 +4,7 @@ echo-server:
     ingressClassName: "nginx"
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    #  nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     hosts:
       - host: eigengrau.docampo-it.ch
         paths:
