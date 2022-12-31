@@ -7,8 +7,8 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
-  syncOptions:
-    - CreateNamespace=true
+    syncOptions:
+      - CreateNamespace=true
   project: default 
   source:
     repoURL: https://github.com/sayheyd/kube-helm-charts.git
