@@ -1,16 +1,15 @@
-replicaCount: 2
-
-ingress:
-  enabled: true
-  ingressClassName: "nginx"
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-  hosts:
-    - host: eigengrau.docampo-it.ch
-      paths:
-        - /
-  tls:
-    - hosts:
-        - eigengrau.docampo-it.ch
-      secretName: customer-eigengrau-k8s-tls
+echo-server:
+  ingress:
+    enabled: true
+    ingressClassName: "nginx"
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    hosts:
+      - host: eigengrau.docampo-it.ch
+        paths:
+          - /
+    tls:
+      - hosts:
+          - eigengrau.docampo-it.ch
+        secretName: customer-eigengrau-k8s-tls
