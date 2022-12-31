@@ -10,14 +10,14 @@ spec:
     syncOptions:
       - CreateNamespace=true
   project: default 
-  helm:
-    releaseName: customer-eigengrau
-    valueFiles:
-      - values.yaml
   source:
     repoURL: https://github.com/sayheyd/kube-helm-charts.git
     targetRevision: main
     path: customer-deployments/charts/eigengrau
+    helm:
+      releaseName: customer-eigengrau
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: customer-eigengrau
