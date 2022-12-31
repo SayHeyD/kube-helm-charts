@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  ingressClassName: "nginx"
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+  tls:
+    - secretName: argocd-k8s-tls
+      hosts:
+        - argocd.docampo-it.ch
+
+  hosts:
+    - host: argocd.docampo-it.ch
+      paths:
+        - /

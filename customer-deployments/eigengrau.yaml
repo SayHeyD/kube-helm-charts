@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: customer-eigengrau
+  namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
+  syncOptions:
+    - CreateNamespace=true
+  project: default 
+  source:
+    repoURL: https://github.com/sayheyd/kube-helm-charts.git
+    targetRevision: main
+    path: customer-deployments/charts/eigengrau
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: customer-eigengrau
