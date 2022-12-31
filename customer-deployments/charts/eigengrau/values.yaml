@@ -4,12 +4,11 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-  tls:
-    - secretName: argocd-k8s-tls
-      hosts:
-        - eigengrau.docampo-it.ch
-
   hosts:
     - host: eigengrau.docampo-it.ch
       paths:
         - /
+  tls:
+    - hosts:
+        - eigengrau.docampo-it.ch
+      secretName: customer-eigengrau-k8s-tls
