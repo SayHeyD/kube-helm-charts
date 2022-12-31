@@ -7,9 +7,9 @@ ingress:
   tls:
     - secretName: argocd-k8s-tls
       hosts:
-        - argocd.docampo-it.ch
+        - eigengrau.docampo-it.ch
 
   hosts:
-    - host: argocd.docampo-it.ch
+    - host: eigengrau.docampo-it.ch
       paths:
         - /
