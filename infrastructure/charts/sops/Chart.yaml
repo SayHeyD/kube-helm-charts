@@ -1,0 +1,7 @@
+apiVersion: v2
+name: sops
+version: 1.0.0
+dependencies:
+  - name: sops-secrets-operator
+    version: 0.12.5
+    repository: https://isindir.github.io/sops-secrets-operator/

@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sops
+  namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  project: default 
+  source:
+    repoURL: https://github.com/sayheyd/kube-helm-charts.git
+    targetRevision: main
+    path: infrastructure/charts/sops
+    helm:
+      releaseName: sops
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: sops

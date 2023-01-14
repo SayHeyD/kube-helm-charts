@@ -1,0 +1,3 @@
+sops-operator:
+  gpg:
+    enabled: true
