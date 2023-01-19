@@ -1,11 +1,9 @@
 argo-cd:
-  configs:
-    repositories:
-      private-helm-repo:
-        url: https://github.com/SayHeyD/kube-helm-charts.git
-        name: kube-helm-charts
-        username: SayHeyD
-        password: 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
+
+  repositories:
+    kube-helm-charts:
+      url: https://github.com/argoproj/private-repo
+
 
   server:
     ingress:
@@ -25,9 +23,3 @@ argo-cd:
         - secretName: argocd-k8s-tls
           hosts:
             - argocd.docampo-it.ch
-
-sops-secrets-operator:
-  gpg:
-    enabled: true
-    secret1: gpg1
-    secret2: gpg2

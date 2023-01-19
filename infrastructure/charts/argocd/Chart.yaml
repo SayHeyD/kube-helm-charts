@@ -2,9 +2,9 @@ apiVersion: v2
 name: argocd
 version: 1.0.0
 dependencies:
-  - name: argo-cd
-    version: 5.16.13
-    repository: https://argoproj.github.io/argo-helm
   - name: sops-secrets-operator
     version: 0.12.5
     repository: https://isindir.github.io/sops-secrets-operator/
+  - name: argo-cd
+    version: 5.16.13
+    repository: https://argoproj.github.io/argo-helm
