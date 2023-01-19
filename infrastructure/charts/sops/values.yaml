@@ -4,6 +4,6 @@ sops-secrets-operator:
       value: /age/keys.txt
 
   secretsAsFiles:
-    - name: age_key
+    - name: age-key
       mountPath: "/age/"
       secretName: sops-key
