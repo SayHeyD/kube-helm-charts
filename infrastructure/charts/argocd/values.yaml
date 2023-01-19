@@ -1,12 +1,5 @@
 argo-cd:
 
-  repositories:
-    kube-helm-charts:
-      url: https://github.com/argoproj/private-repo
-    test-repo:
-      url: https://github.com/test/kube-helm-charts.git
-
-
   server:
     ingress:
       enabled: true
