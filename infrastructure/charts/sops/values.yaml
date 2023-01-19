@@ -1,4 +1,4 @@
-sops-operator:
+sops-secrets-operator:
   gpg:
     enabled: true
     secret1: gpg1
