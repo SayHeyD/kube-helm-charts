@@ -16,4 +16,4 @@ spec:
     - group: '*'
       kind: '*'
   orphanedResources:
-    warn: false
+    warn: true
