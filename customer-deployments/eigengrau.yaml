@@ -9,7 +9,7 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  project: default 
+  project: customers 
   source:
     repoURL: https://github.com/sayheyd/kube-helm-charts.git
     targetRevision: main
