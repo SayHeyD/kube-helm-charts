@@ -1,5 +1,9 @@
 sops-secrets-operator:
-  gpg:
-    enabled: true
-    secret1: gpg1
-    secret2: gpg2
+  extraEnv:
+    - name: SOPS_AGE_KEY_FILE
+      value: /age/keys.txt
+
+  secretsAsFiles:
+    - name: age_key
+      mountPath: "/age/"
+      secretName: sops-key
