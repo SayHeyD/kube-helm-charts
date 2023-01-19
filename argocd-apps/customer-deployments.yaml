@@ -7,7 +7,7 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
-  project: default 
+  project: infrastructure 
   source:
     repoURL: https://github.com/sayheyd/kube-helm-charts.git
     targetRevision: main
