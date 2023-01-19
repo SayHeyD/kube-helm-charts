@@ -1,3 +1,5 @@
 sops-operator:
   gpg:
     enabled: true
+    secret1: gpg1
+    secret2: gpg2
