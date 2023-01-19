@@ -1,0 +1,9 @@
+{{ define "common.encrypted_files" }}
+{{ $currentScope := .}}
+{{ range $path, $_ :=  .Files.Glob (printf "secrets/%s/*.enc.yaml" .Release.Namespace) }}
+{{- with $currentScope}}
+---
+{{ .Files.Get $path }}
+{{- end }}
+{{ end }}
+{{ end }}
