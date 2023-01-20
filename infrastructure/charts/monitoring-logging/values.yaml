@@ -7,7 +7,7 @@ loki-stack:
 
   grafana:
     enabled: true
-    
+
     ingress:
       enabled: true
 
@@ -18,6 +18,11 @@ loki-stack:
 
       hosts:
         - grafana.docampo-it.ch
+
+      tls:
+        - secretName: grafana-k8s-tls
+          hosts:
+            - grafana.docampo-it.ch
 
   prometheus:
     enabled: true
