@@ -4,6 +4,9 @@ loki-stack:
 
   promtail:
     enabled: true
+    config:
+      clients:
+        - url: http://monitoring-logging-loki:3100/loki/api/v1/push
 
   grafana:
     enabled: true
