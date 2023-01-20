@@ -1,12 +1,23 @@
 loki-stack:
   loki:
     enabled: true
-    
+
   promtail:
     enabled: true
 
   grafana:
     enabled: true
+    
+    ingress:
+      enabled: true
+
+      ingressClassName: nginx
+
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+
+      hosts:
+        - grafana.docampo-it.ch
 
   prometheus:
     enabled: true
