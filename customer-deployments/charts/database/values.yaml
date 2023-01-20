@@ -5,5 +5,4 @@ postgresql:
   architecture: standalone
 
   primary:
-    configuration: |-
-      # log_destination = jsonlog
+    configuration: ""
