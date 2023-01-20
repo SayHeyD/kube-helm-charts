@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: monitoring-logging
+  namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  project: infrastructure 
+  source:
+    repoURL: https://github.com/sayheyd/kube-helm-charts.git
+    targetRevision: main
+    path: infrastructure/charts/monitoring-logging
+    helm:
+      releaseName: monitoring-logging
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring-logging
