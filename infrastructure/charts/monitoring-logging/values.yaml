@@ -29,3 +29,6 @@ loki-stack:
 
   prometheus:
     enabled: true
+
+    alertmanager:
+      enabled: false
