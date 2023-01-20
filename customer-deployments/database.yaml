@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: customer-database
+  namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  project: customers 
+  source:
+    repoURL: https://github.com/sayheyd/kube-helm-charts.git
+    targetRevision: main
+    path: customer-deployments/charts/database
+    helm:
+      releaseName: customer-database
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: customer-database

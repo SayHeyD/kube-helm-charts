@@ -1,0 +1,5 @@
+postgresql:
+  auth:
+    existingSecret: customer-database-db-credentials
+
+  architecture: standalone
