@@ -5,5 +5,5 @@ postgresql:
   architecture: standalone
 
   primary:
-    args:
-      - "--log_destination=jsonlog" 
+    configuration: |-
+      log_destination jsonlog
