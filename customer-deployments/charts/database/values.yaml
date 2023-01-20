@@ -6,4 +6,4 @@ postgresql:
 
   primary:
     configuration: |-
-      log_destination = jsonlog
+      # log_destination = jsonlog
