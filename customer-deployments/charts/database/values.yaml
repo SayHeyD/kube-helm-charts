@@ -3,3 +3,7 @@ postgresql:
     existingSecret: customer-database-db-credentials
 
   architecture: standalone
+
+  primary:
+    args:
+      - "--log_destination=jsonlog" 
