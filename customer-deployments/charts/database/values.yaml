@@ -1,9 +1,0 @@
-postgresql:
-  auth:
-    existingSecret: customer-database-db-credentials
-
-  architecture: standalone
-
-  primary:
-    extendedConfiguration: |-
-      log_destination = 'jsonlog'
