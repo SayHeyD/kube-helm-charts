@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: schein
+  namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      selfHeal: true
+  project: customers 
+  source:
+    repoURL: https://github.com/sayheyd/kube-helm-charts.git
+    targetRevision: main
+    path: deployments/charts/schein
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: deployment-schein
