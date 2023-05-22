@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: schein-service
+spec:
+  selector:
+    app: schein
+  ports:
+  - name: schein-http
+    protocol: TCP
+    port: 80

@@ -1,0 +1,18 @@
+service:
+  port: 80
+
+ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    className: "nginx"
+    hosts: 
+      - host: schein.gg
+        paths:
+          - path: /
+            pathType: Prefix
+
+    tls:
+      - secretName: schein-gg-tls
+        hosts:
+          - schein.gg

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: schein-deployment
+  labels:
+    app: schein
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: schein
+  template:
+    metadata:
+      labels:
+        app: schein
+    spec:
+      containers:
+      - name: schein
+        image: sayheyd/schein.gg:latest
+        ports:
+        - containerPort: 80
