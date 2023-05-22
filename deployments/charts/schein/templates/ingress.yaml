@@ -38,7 +38,7 @@ spec:
             pathType: {{ .pathType }}
             backend:
               service:
-                name: {{ $fullName }}
+                name: schein-service
                 port:
                   number: {{ $svcPort }}
           {{- end }}
