@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: schein
-        image: sayhey/schein.gg:v1.0.0-main-9b21c65c
+        image: sayhey/schein.gg:v1.0.1-main-6b9ef751
         ports:
         - containerPort: 80
